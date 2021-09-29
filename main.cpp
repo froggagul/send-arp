@@ -40,7 +40,8 @@ string getMyMAC(const string &ifname) {
   if (str.length() > 0) {
 	return str;
   } else {
-    return "";
+    perror("cant find mac address");
+	exit(-1);
   }
 }
 
